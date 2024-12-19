@@ -6,10 +6,7 @@ SCRIPT_COMMIT="7cf1e5ffc5aeb33b81fa9401df9fd53ef1dae6d1"
 ffbuild_enabled() {
     [[ $TARGET != *32 ]] || return -1
     (( $(ffbuild_ffver) > 700 )) || return -1
-    # vvenc force-enabled avx2 and equivalent compiler options, and uses a static initializer that promptly
-    # runs such instructions. Making resulting binaries malfunction on any but the very latest CPUs.
-    # Until upstream fixes this behaviour, force-disable vvenc.
-    return -1
+    return 0
 }
 
 ffbuild_dockerbuild() {
