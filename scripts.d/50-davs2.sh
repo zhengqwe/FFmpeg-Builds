@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SCRIPT_REPO="https://github.com/xatabhk/davs2-10bit.git"
-SCRIPT_COMMIT="21d64c8f8e36af71fc7a488cd6f789c86cdd1200"
+SCRIPT_REPO="https://github.com/zhengqwe/davs2-10bit.git"
+SCRIPT_COMMIT="cfdd409c3e2c5f56d82c90771cac24e1fb55f217"
 
 ffbuild_enabled() {
     [[ $VARIANT == lgpl* ]] && return -1
