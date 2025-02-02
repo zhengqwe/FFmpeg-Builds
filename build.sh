@@ -26,7 +26,6 @@ GIT_BRANCH="${GIT_BRANCH_OVERRIDE:-$GIT_BRANCH}"
 
 BUILD_SCRIPT="$(mktemp)"
 trap "rm -f -- '$BUILD_SCRIPT'" EXIT
-trap "cat ffbuild/config.log" EXIT
 
 cat <<EOF >"$BUILD_SCRIPT"
     set -xe
