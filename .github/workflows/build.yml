@@ -117,7 +117,7 @@ jobs:
           path: .cache/cache.tar.gz
       - name: Cleanup
         continue-on-error: true
-        uses: zhengqwe/delete-untagged-ghcr-action@main
+        uses: BtbN/delete-untagged-ghcr-action@main
         with:
           token: ${{ github.token }}
           package_name: ${{ steps.imagename.outputs.rawname }}
@@ -173,7 +173,7 @@ jobs:
             GH_REPO=ghcr.io/${{ steps.imagename.outputs.gh_repo }}
       - name: Cleanup
         continue-on-error: true
-        uses: zhengqwe/delete-untagged-ghcr-action@main
+        uses: BtbN/delete-untagged-ghcr-action@main
         with:
           token: ${{ github.token }}
           package_name: ${{ steps.imagename.outputs.rawname }}
@@ -256,7 +256,7 @@ jobs:
           cache-from: type=registry,ref=${{ steps.imagename.outputs.name }}:cache
       - name: Cleanup
         continue-on-error: true
-        uses: zhengqwe/delete-untagged-ghcr-action@main
+        uses: BtbN/delete-untagged-ghcr-action@main
         with:
           token: ${{ github.token }}
           package_name: ${{ steps.imagename.outputs.rawname }}
