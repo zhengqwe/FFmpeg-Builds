@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SCRIPT_REPO="https://github.com/pkuvcl/davs2.git"
-SCRIPT_COMMIT="b41cf117452e2d73d827f02d3e30aa20f1c721ac"
+SCRIPT_REPO="https://github.com/zhengqwe/davs2-10bit.git"
+SCRIPT_COMMIT="000d1554d8306978f8221c29698733525f741c5f"
 
 ffbuild_enabled() {
     [[ $VARIANT == lgpl* ]] && return -1
@@ -22,6 +22,7 @@ ffbuild_dockerbuild() {
     local myconf=(
         --disable-cli
         --enable-pic
+        --bit-depth=10
         --prefix="$FFBUILD_PREFIX"
     )
 
