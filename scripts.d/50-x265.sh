@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPT_REPO="https://bitbucket.org/multicoreware/x265_git.git"
+SCRIPT_REPO="https://github.com/Multicorewareinc/x265.git"
 SCRIPT_COMMIT=$(git ls-remote "$SCRIPT_REPO" refs/heads/master | awk '{print $1}')
 
 ffbuild_enabled() {
