@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://github.com/xiph/rav1e.git"
-SCRIPT_COMMIT="31435de9d76fddd38f6dcc31d4014574cebb2092"
+SCRIPT_COMMIT=$(git ls-remote "$SCRIPT_REPO" refs/heads/master | awk '{print $1}')
 
 ffbuild_enabled() {
     [[ $TARGET == win32 ]] && return -1

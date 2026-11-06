@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://github.com/fraunhoferhhi/vvenc.git"
-SCRIPT_COMMIT="0e7508b811bbea3cd510956ddb3193f3a4c93684"
+SCRIPT_COMMIT=$(git ls-remote "$SCRIPT_REPO" refs/heads/master | awk '{print $1}')
 
 ffbuild_enabled() {
     [[ $TARGET != *32 ]] || return -1

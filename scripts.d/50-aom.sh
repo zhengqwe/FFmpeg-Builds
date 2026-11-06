@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://aomedia.googlesource.com/aom"
-SCRIPT_COMMIT="9ace39e02a34992b83fc7f7f2bfbbd2e79348c74"
+SCRIPT_COMMIT=$(git ls-remote "$SCRIPT_REPO" refs/heads/master | awk '{print $1}')
 
 ffbuild_depends() {
     echo base
